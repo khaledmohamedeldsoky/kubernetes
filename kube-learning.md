@@ -49,12 +49,13 @@
 ## 1. Monitor Cluster Componots
 
 ## 2. Manage Application Logs
-
+---
 # Application Lifecyle Management
 
 ## 1. [Rolling Updates and Rollingback](https://drive.google.com/file/d/1UMwbtrLFWDJejj4T21PdHmb6XR-3SzJD/view?usp=sharing)
 
 ## 2. [Commands and Argument in docker](https://drive.google.com/file/d/1UMwbtrLFWDJejj4T21PdHmb6XR-3SzJD/view?usp=sharing)
+
 ## 3. [Commands and Argument in Kubernetes](https://drive.google.com/file/d/1UMwbtrLFWDJejj4T21PdHmb6XR-3SzJD/view?usp=sharing)
 
 ## 4. [Configure Enviroment Variable in Application](https://drive.google.com/file/d/1UMwbtrLFWDJejj4T21PdHmb6XR-3SzJD/view?usp=sharing)
@@ -64,6 +65,51 @@
 ## 6. [Secrets](https://drive.google.com/file/d/1UMwbtrLFWDJejj4T21PdHmb6XR-3SzJD/view?usp=sharing)
 
 ## 7. Demo: Encrypting Secret Data as rest
+
 ## 8. [Multi container pods](https://drive.google.com/file/d/1UMwbtrLFWDJejj4T21PdHmb6XR-3SzJD/view?usp=sharing)
 
+---
+# Cluster Maintenance
+##
+
+---
+# Security
+## 1. [Kubernetes Security Primitives](https://drive.google.com/file/d/1MTWGy5LuJJL0qyq-S-kl5K5M-wD3gML3/view?usp=sharing)
+
+## 2. [Authentication](https://drive.google.com/file/d/1MTWGy5LuJJL0qyq-S-kl5K5M-wD3gML3/view?usp=sharing)
+
+## 3. TLS Introduction
+
+## 4. TLS Basics
+
+## 5. [TLS in Kubernetes](https://drive.google.com/file/d/1MTWGy5LuJJL0qyq-S-kl5K5M-wD3gML3/view?usp=sharing)
+
+## 6. [Tls in Kubernetes - Certificate Creation](https://drive.google.com/file/d/1MTWGy5LuJJL0qyq-S-kl5K5M-wD3gML3/view?usp=sharing)
+
+## 7. [View Certificate Details](https://drive.google.com/file/d/1MTWGy5LuJJL0qyq-S-kl5K5M-wD3gML3/view?usp=sharing)
+
+## 8. [Certificate API](https://drive.google.com/file/d/1MTWGy5LuJJL0qyq-S-kl5K5M-wD3gML3/view?usp=sharing)
+
+## 9. [KubeConfig](https://drive.google.com/file/d/1MTWGy5LuJJL0qyq-S-kl5K5M-wD3gML3/view?usp=sharing)
+
+## 10. [APi Groups](https://drive.google.com/file/d/1MTWGy5LuJJL0qyq-S-kl5K5M-wD3gML3/view?usp=sharing)
+
+## 11. [Authorization](https://drive.google.com/file/d/1MTWGy5LuJJL0qyq-S-kl5K5M-wD3gML3/view?usp=sharing)
    
+## 12. [Role Based Access Controls(RBAC)](https://drive.google.com/file/d/1MTWGy5LuJJL0qyq-S-kl5K5M-wD3gML3/view?usp=sharing)
+
+## 13. [Cluster Roles](https://drive.google.com/file/d/1MTWGy5LuJJL0qyq-S-kl5K5M-wD3gML3/view?usp=sharing)
+
+## 14. Service Accounts
+
+## 15. [Image Security](https://drive.google.com/file/d/1MTWGy5LuJJL0qyq-S-kl5K5M-wD3gML3/view?usp=sharing)
+
+## 16. Pre-requisite - Security in Docker
+
+## 17. Security Contexts
+
+## 18. [Network Policies](https://drive.google.com/file/d/1MUaRwsniR5WUSOO0mL31GfwZ1yKQ7F67/view?usp=sharing)
+
+## 19. Developing Network Policies
+
+    
