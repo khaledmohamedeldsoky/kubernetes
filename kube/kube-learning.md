@@ -71,30 +71,6 @@
 ## 1. [Kubernetes Security Primitives](https://drive.google.com/file/d/1MTWGy5LuJJL0qyq-S-kl5K5M-wD3gML3/view?usp=sharing)
 **kube-apiserver**
 
-Who can access? | What can they do?
-
-Who can access? (Authentication)
-
-❑ Files – Username and Passwords
-
-❑ Files – Username and Tokens
-
-❑ Certificates
-
-❑ External Authentication providers - LDAP
-
-❑ Service Accounts
-
-What can they do? (Authorization)
-
-❑ RBAC Authorization 
-
-❑ ABAC Authorization
-
-❑ Node Authorization
-
-❑ Webhook Mode
-
 ## 2. [Authentication](https://drive.google.com/file/d/1MTWGy5LuJJL0qyq-S-kl5K5M-wD3gML3/view?usp=sharing)
 
 ## 3. TLS Introduction
@@ -130,5 +106,3 @@ What can they do? (Authorization)
 ## 18. [Network Policies](https://drive.google.com/file/d/1MUaRwsniR5WUSOO0mL31GfwZ1yKQ7F67/view?usp=sharing)
 
 ## 19. Developing Network Policies
-
-    
