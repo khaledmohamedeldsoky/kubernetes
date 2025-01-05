@@ -115,51 +115,33 @@ kubectl logs pod <pod name>
 ## kubectl apply -f deployments/rbac/rbac.yaml
 ```sh
 git clone https://github.com/nginxinc/kubernetes-ingress.git --branch v4.0.0
-```
-### Change the active directory.
-```sh
+
+# Change the active directory.
 cd kubernetes-ingress
-```
-### Create a namespace and a service account:
-```sh
+
+# Create a namespace and a service account:
 kubectl apply -f deployments/common/ns-and-sa.yaml
-```
 
-### Create a cluster role and binding for the service account:
-```sh
+# Create a cluster role and binding for the service account:
 kubectl apply -f deployments/rbac/rbac.yaml
-```
 
-Create common resources
-
-
-```sh
+# Create common resources
 kubectl apply -f examples/shared-examples/default-server-secret/default-server-secret.yaml
-```
 
-Create a ConfigMap to customize your NGINX settings:
-```sh
+# Create a ConfigMap to customize your NGINX settings:
 kubectl apply -f examples/shared-examples/default-server-secret/default-server-secret.yaml
-```
 
-Create an IngressClass resource. NGINX Ingress Controller won’t start without an IngressClass resource.
-```sh
+#Create an IngressClass resource. NGINX Ingress Controller won’t start without an IngressClass resource.
 kubectl apply -f deployments/common/ingress-class.yaml
-```
 
-Create core custom resources
-INSTALL CRDS FROM SINGLE YAML
-```sh
+# Create core custom resources
+# INSTALL CRDS FROM SINGLE YAML
 kubectl apply -f https://raw.githubusercontent.com/nginxinc/kubernetes-ingress/v4.0.0/deploy/crds.yaml
-```
 
-Deploy NGINX Ingress Controller
-```sh
+# Deploy NGINX Ingress Controller
 kubectl apply -f deployments/deployment/nginx-ingress.yaml
-```
 
-Confirm NGINX Ingress Controller is running
-```sh
+# Confirm NGINX Ingress Controller is running
 kubectl get pods --namespace=nginx-ingress
 ```
 
