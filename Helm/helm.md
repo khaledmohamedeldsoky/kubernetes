@@ -6,7 +6,8 @@
 ---
 # [Helm Doc](https://helm.sh/docs/) 
 
-# Install Helm
+# ▶️ Install Helm
+
 ```bash
 curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null
 sudo apt-get install apt-transport-https --yes
@@ -15,7 +16,7 @@ sudo apt-get update
 sudo apt-get install helm
 ```
 
-## helm completion bash
+## ⏩ helm completion bash
   ```sh
      echo "source <(helm completion bash)" >> ~/.bashrc
      source ~/.bashrc
@@ -28,22 +29,22 @@ helm create Helm-charts
 ```
 
 like this 
-```
-Helm-charts/
-  Chart.yaml          # A YAML file containing information about the chart                        [Not used]
-  LICENSE             # OPTIONAL: A plain text file containing the license for the chart          [Not used]
-  README.md           # OPTIONAL: A human-readable README file  ---------------------------------> [Not used]
-  values.yaml         # The default configuration values for this chart                           
-  values.schema.json  # OPTIONAL: A JSON Schema for imposing a structure on the values.yaml file  [Not used]
-  charts/             # A directory containing any charts upon which this chart depends.
-  crds/               # Custom Resource Definitions                                               [Not used]
-  templates/          # A directory of templates where the actual yaml file is created
-  templates/NOTES.txt # OPTIONAL: A plain text file containing short usage notes                  [Not used]
+```sh
+📁Helm-charts/
+    Chart.yaml          # A YAML file containing information about the chart                        [Not used]
+    LICENSE             # OPTIONAL: A plain text file containing the license for the chart          [Not used]
+    README.md           # OPTIONAL: A human-readable README file  ---------------------------------> [Not used]
+    values.yaml         # The default configuration values for this chart                           
+    values.schema.json  # OPTIONAL: A JSON Schema for imposing a structure on the values.yaml file  [Not used]
+    charts/             # A directory containing any charts upon which this chart depends.
+    crds/               # Custom Resource Definitions                                               [Not used]
+    templates/          # A directory of templates where the actual yaml file is created
+    templates/NOTES.txt # OPTIONAL: A plain text file containing short usage notes                  [Not used]
 ```
 ---
-# [Cheat Sheet](https://helm.sh/docs/howto/charts_tips_and_tricks/)
+# ▶️ [Cheat Sheet](https://helm.sh/docs/howto/charts_tips_and_tricks/)
 
-### Chart Management 
+## ⏩ Chart Management 
 ```bash 
 # Creates a chart directory along with the common files and directories used in a chart.
 helm create <name>  
@@ -76,7 +77,7 @@ helm pull <chart> --version <number>
 helm dependency list <chart>            
 ```
 
-### Install and Uninstall Apps
+## ⏩ Install and Uninstall Apps
 
 ```sh 
 # Install the chart with a name
@@ -105,9 +106,9 @@ helm uninstall <name>
 ```
 
 ---
-# [Chart Development Tips and Tricks](https://helm.sh/docs/howto/charts_tips_and_tricks/)
+# ▶️ [Chart Development Tips and Tricks](https://helm.sh/docs/howto/charts_tips_and_tricks/)
 
-### Quote Strings, Don't Quote Integers
+## ⏩ Quote Strings, Don't Quote Integers
 
 When you are working with string data, you are always safer quoting the strings
 ```yml
@@ -121,7 +122,7 @@ port: {{ .Values.Port }}
 
 ---
 
-# [The Chart File Structure](https://helm.sh/docs/topics/charts/)
+# ▶️ [The Chart File Structure](https://helm.sh/docs/topics/charts/)
 
 ```yml
 wordpress/
@@ -137,10 +138,10 @@ wordpress/
   templates/NOTES.txt # OPTIONAL: A plain text file containing short usage notes
 ```
 
-# [flow control](https://helm.sh/docs/chart_template_guide/control_structures/)
+# ▶️ [flow control](https://helm.sh/docs/chart_template_guide/control_structures/)
 
-## If/Else
-```
+## ⏩ If/Else
+```yml
 {{ if PIPELINE }}
   # Do something
 {{ else if OTHER PIPELINE }}
@@ -150,7 +151,7 @@ wordpress/
 {{ end }}
 ```
 
-```
+```yml
 env:
 {{- range .Values.env -}}
   - name: {{ .name }}
@@ -161,7 +162,7 @@ env:
 after this you will make value dir and make file for every service and put the values
 
 after this you will make helm for redis
-```
+```sh
 helm create redis
 ```
 make the service and deployment files for redis in the templete dir 
@@ -173,32 +174,26 @@ and make file for redis in values dir
 ```sh
 # to show the values when put it in the chart
 helm templete -f <file-values-for-one-chart> <path for helm chart dir>
-
 helm template -f values/adservice-values.yml helm/microservice
-```
 
-```sh
 #for examines a chart for possible issues
 helm lint -f <file-values-for-one-chart> <path for helm chart dir>
-
 helm lint -f values/adservice-values.yml helm/microservice/
-```
 
-```sh
 # to create a release from my values in the chart name
 # this is actual use for run the chart in kube
 helm install -f myvalues.yaml release_name chart_name
-```
 
-```sh
 #i think it is like templete
 helm install --dry-run -f myvalues.yaml release_name chart_name
-```
 
-```sh
+#delete release
 helm uninstall release_name
 ```
-helmfile
+---
+
+## 📁 helmfile
+
 ```sh
 apt install helmfile
 helmfile sync

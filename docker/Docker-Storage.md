@@ -22,5 +22,5 @@ mkdir /data/mysql
 docker run -v /data/mysql:/var/lib/mysql
 ```
 ---
-Storage drive 🆚 Volume drive
+🔎 Storage drive 🆚 Volume drive 
 

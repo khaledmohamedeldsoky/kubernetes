@@ -1,61 +1,57 @@
 # [kube Documention](https://kubernetes.io/docs/home/)
-https://www.youtube.com/watch?v=EQNO_kM96Mo
 
 # [Cluster Architecture ](https://kubernetes.io/docs/concepts/architecture/)
-## Control plane components 
 
-1. ### `kube-apiserver`
-2. ### `etcd`
-3. ### `kube-scheduler` 
-4. ### `kube-controller-manager` 
-5. ### `cloud-controller-manager` 
+## ▶️ Control plane components 
 
-## Node components
+```yml
+1. kube-apiserver
+2. etcd
+3. kube-scheduler 
+4. kube-controller-manager 
+5. cloud-controller-manager 
+```
 
-1. ### `kubelet`
-2. ### `kube-proxy (optional)` 
-3. ### `Container runtime`
-
+## ▶️ Node components
+```yml
+1. kubelet
+2. kube-proxy (optional) 
+3. Container runtime
+```
+---
 # [Install and Set Up kubectl on Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-using-native-package-management)
 
-## Installing kubeadm
-1. ### Update the apt package index
-   ```sh 
-   sudo apt-get update 
-   ```
-2. ###  nstall packages needed to use the Kubernetes apt repository
-   ```sh 
-   sudo apt-get install -y apt-transport-https ca-certificates curl gpg
-   ```
-3. ### Download the public signing key for the Kubernetes package repositories.
-   ```sh
-   # If the folder "/etc/apt/keyrings" does not exist, it should be created before the curl command, read the note below.
-   # sudo mkdir -p -m 755 /etc/apt/keyrings
-   curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
-   ```
-4. ### allow unprivileged APT programs to read this keyring
-   ```sh 
-   sudo chmod 644 /etc/apt/keyrings/kubernetes-apt-keyring.gpg
-   ```
-5. ### Add the appropriate Kubernetes apt repository
-   ```sh
-   echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
-   ```
-6. ### helps tools such as command-not-found to work correctly
-   ```sh
-   sudo chmod 644 /etc/apt/sources.list.d/kubernetes.list
-   ```
-
-7. ### Update apt package index, then install kubectl
-   ```sh
-   sudo apt-get update
-   sudo apt-get install -y kubectl
-   ```
-8. ### nstall kubelet, kubeadm and kubectl, and pin their version:
-   ```sh
-   sudo apt-get install -y kubelet kubeadm kubectl
-   sudo apt-mark hold kubelet kubeadm kubectl
-   ```
+## Installing Using kubeadm 
+### ▶️ Update the apt package index
+```sh 
+# Update apt package index
+sudo apt-get update 
+   
+# install packages needed to use the Kubernetes apt repository 
+sudo apt-get install -y apt-transport-https ca-certificates curl gpg
+   
+# Download the public signing key for the Kubernetes package repositories.
+# If the folder "/etc/apt/keyrings" does not exist, it should be created before the curl command, read the note below.
+# sudo mkdir -p -m 755 /etc/apt/keyrings
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+   
+# allow unprivileged APT programs to read this keyring
+sudo chmod 644 /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+   
+# Add the appropriate Kubernetes apt repository
+echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+   
+# helps tools such as command-not-found to work correctly
+sudo chmod 644 /etc/apt/sources.list.d/kubernetes.list
+   
+# Update apt package index, then install kubectl
+sudo apt-get update
+sudo apt-get install -y kubectl
+   
+# install kubelet, kubeadm and kubectl, and pin their version:
+sudo apt-get install -y kubelet kubeadm kubectl
+sudo apt-mark hold kubelet kubeadm kubectl
+```
 ----
 after install kubernates do the coming
 # [Container Runtimes](https://v1-28.docs.kubernetes.io/docs/setup/production-environment/container-runtimes/)
@@ -108,7 +104,7 @@ kubectl get service
 
 kubectl logs pod <pod name> 
 ```
-------------------------------------
+---
 
 # install ingress controller
 
